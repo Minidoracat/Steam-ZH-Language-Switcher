@@ -4,8 +4,8 @@
 
 ## 簡介
 
-Steam-ZH-Language-Switcher 是一個油猴 (Tampermonkey) 插件，旨在解決繁體中文系統在瀏覽 Steam 商店時遇到的語言問題。
-由於某些 Steam 頁面僅提供簡體中文，導致繁體中文系統瀏覽這些頁面時會顯示為空白。
+Steam-ZH-Language-Switcher 是一個油猴 (Tampermonkey) 插件，旨在解決繁體中文系統在瀏覽 Steam 商店時遇到的語言問題。  
+由於某些 Steam 頁面僅提供簡體中文，導致繁體中文系統瀏覽這些頁面時會顯示為空白。  
 此插件可自動將 Steam 頁面從繁體中文轉換為簡體中文，並提供選項讓使用者選擇是否開啟自動跳轉。
 
 ## 功能
