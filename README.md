@@ -4,6 +4,14 @@
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue.svg)](https://github.com/Minidoracat/Steam-ZH-Language-Switcher)
 [![Discord](https://img.shields.io/badge/Discord-Join-blue.svg)](https://discord.gg/Gur2V67)
 
+
+大家好！我是 Minidoracat。  
+由於經常需要查看一些遊戲的更新或新聞訊息，但卻常常遇到內容顯示為空白的情況，  
+這問題應該是出在 Steam 頁面判斷語系的 BUG，  
+一旦開發者忘記或不知道設定繁體中文的內容，就會有這問題，  
+這問題困擾了我很久，但是 Valve 很久都沒改善。  
+因此，我開發了這款 **Steam 頁面繁體簡體中文轉換器插件**，希望能解決大家在瀏覽 Steam 商店時遇到的語言問題。
+
 ## 簡介
 
 Steam 頁面繁體簡體中文轉換器 是一個油猴 (Tampermonkey) 插件，旨在解決繁體中文系統在瀏覽 Steam 商店時遇到的語言問題。  
@@ -29,7 +37,7 @@ Steam 頁面繁體簡體中文轉換器 是一個油猴 (Tampermonkey) 插件，
 1. 安裝插件後，打開 Steam 商店頁面。
 2. 右上角會出現一個按鈕，點擊按鈕可在繁體中文和簡體中文之間切換。
 3. 左鍵點擊 Tampermonkey 圖標，選擇相應的選單命令來啟用或停用自動跳轉功能。
-![選項位置](https://i.imgur.com/X50TVlt.png)
+![選項位置](https://i.imgur.com/tOpmgrJ.png)
 4. 選擇「加入作者 Discord」以聯繫作者並獲取更多支持。
 
 
