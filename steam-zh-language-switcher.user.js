@@ -2,8 +2,9 @@
 // @name         Steam 繁體中文轉簡體中文
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  自動將 Steam 頁面從繁體中文轉換為簡體中文，並提供選項讓使用者選擇是否開啟自動跳轉。此插件由 Minidoracat 開發，用於解決繁體中文系統在瀏覽 Steam 商店時遇到的語言問題。更多信息請參閱作者的 Discord。
-// @description:zh-CN 自动将 Steam 页面从繁体中文转换为简体中文，并提供选项让用户选择是否开启自动跳转。此插件由 Minidoracat 开发，用于解决繁体中文系统在浏览 Steam 商店时遇到的语言问题。更多信息请参阅作者的 Discord。
+// @description  自動將 Steam 頁面從繁體中文轉換為簡體中文，並提供選項讓使用者選擇是否開啟自動跳轉。由於某些 Steam 頁面僅提供簡體中文，導致繁體中文系統瀏覽這些頁面時會顯示為空白。此插件由 Minidoracat 開發，用於解決這一問題。更多信息請參閱作者的 Discord。
+// @description:zh-CN 自动将 Steam 页面从繁体中文转换为简体中文，并提供选项让用户选择是否开启自动跳转。由于某些 Steam 页面仅提供简体中文，导致繁体中文系统浏览这些页面时会显示为空白。此插件由 Minidoracat 开发，用于解决这一问题。更多信息请参阅作者的 Discord。
+// @license      MIT
 // @author       Minidoracat
 // @match        *://store.steampowered.com/*
 // @grant        GM_registerMenuCommand

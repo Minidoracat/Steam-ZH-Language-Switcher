@@ -1,10 +1,10 @@
 # Steam-ZH-Language-Switcher
 
-[![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Script-orange.svg)](YOUR_TAMPERMONKEY_SCRIPT_LINK)
+[![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Script-orange.svg)](https://greasyfork.org/zh-TW/scripts/502316-steam-%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E8%BD%89%E7%B0%A1%E9%AB%94%E4%B8%AD%E6%96%87)
 
 ## 簡介
 
-Steam-ZH-Language-Switcher 是一個油猴 (Tampermonkey) 插件，旨在解決繁體中文系統在瀏覽 Steam 商店時遇到的語言問題。此插件可自動將 Steam 頁面從繁體中文轉換為簡體中文，並提供選項讓使用者選擇是否開啟自動跳轉。
+Steam-ZH-Language-Switcher 是一個油猴 (Tampermonkey) 插件，旨在解決繁體中文系統在瀏覽 Steam 商店時遇到的語言問題。由於某些 Steam 頁面僅提供簡體中文，導致繁體中文系統瀏覽這些頁面時會顯示為空白。此插件可自動將 Steam 頁面從繁體中文轉換為簡體中文，並提供選項讓使用者選擇是否開啟自動跳轉。
 
 ## 功能
 
@@ -18,7 +18,7 @@ Steam-ZH-Language-Switcher 是一個油猴 (Tampermonkey) 插件，旨在解決�
 1. 安裝 [Tampermonkey](https://www.tampermonkey.net/) 瀏覽器擴展。
 2. 點擊以下連結安裝此腳本：
 
-   [![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Script-orange.svg)](YOUR_TAMPERMONKEY_SCRIPT_LINK)
+   [安裝腳本](https://github.com/Minidoracat/Steam-ZH-Language-Switcher/raw/master/steam-zh-language-switcher.user.js)
 
 ## 使用方法
 
@@ -42,4 +42,4 @@ Steam-ZH-Language-Switcher 是一個油猴 (Tampermonkey) 插件，旨在解決�
 
 ## 授權
 
-本專案採用 MIT 授權。詳細資訊請參閱 [LICENSE](LICENSE) 文件。
+本專案採用 MIT 授權。詳細資訊請參閱 [LICENSE](https://github.com/Minidoracat/Steam-ZH-Language-Switcher/blob/master/LICENSE) 文件。
