@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Steam 頁面繁體簡體中文轉換器
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  自動將 Steam 頁面在繁體中文和簡體中文之間轉換，並提供選項讓使用者選擇是否開啟自動跳轉。由於某些 Steam 頁面僅提供簡體中文，導致繁體中文系統瀏覽這些頁面時會顯示為空白。此插件由 Minidoracat 開發，用於解決這一問題。更多信息請參閱作者的 Discord。
 // @description:zh-CN 自动将 Steam 页面在繁体中文和简体中文之间转换，并提供选项让用户选择是否开启自动跳转。由于某些 Steam 页面仅提供简体中文，导致繁体中文系统浏览这些页面时会显示为空白。此插件由 Minidoracat 开发，用于解决这一问题。更多信息请参阅作者的 Discord。
 // @license      MIT
@@ -24,9 +24,9 @@
     // 在右上角工具欄附近增加一個切換語言的按鈕
     function addSwitchButton() {
         let buttonContainer = document.createElement('div');
-        buttonContainer.style.position = 'absolute';
-        buttonContainer.style.top = '10px';
-        buttonContainer.style.right = '10px';
+        buttonContainer.style.position = 'fixed';
+        buttonContainer.style.top = '50px';
+        buttonContainer.style.right = '50px';
         buttonContainer.style.zIndex = '9999';
 
         let switchButton = document.createElement('button');
