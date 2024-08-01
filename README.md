@@ -1,12 +1,12 @@
-# Steam 繁體簡體中文轉換器
+# Steam 頁面繁體簡體中文轉換器
 
-[![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Script-orange.svg)](https://greasyfork.org/zh-TW/scripts/502316-steam-%E7%B9%81%E9%AB%94%E7%B0%A1%E9%AB%94%E4%B8%AD%E6%96%87%E8%BD%89%E6%8F%9B%E5%99%A8)
+[![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Script-orange.svg)](https://greasyfork.org/zh-TW/scripts/502316-steam-%E9%A0%81%E9%9D%A2%E7%B9%81%E9%AB%94%E7%B0%A1%E9%AB%94%E4%B8%AD%E6%96%87%E8%BD%89%E6%8F%9B%E5%99%A8)
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue.svg)](https://github.com/Minidoracat/Steam-ZH-Language-Switcher)
 [![Discord](https://img.shields.io/badge/Discord-Join-blue.svg)](https://discord.gg/Gur2V67)
 
 ## 簡介
 
-Steam 繁體簡體中文轉換器 是一個油猴 (Tampermonkey) 插件，旨在解決繁體中文系統在瀏覽 Steam 商店時遇到的語言問題。  
+Steam 頁面繁體簡體中文轉換器 是一個油猴 (Tampermonkey) 插件，旨在解決繁體中文系統在瀏覽 Steam 商店時遇到的語言問題。  
 由於某些 Steam 頁面僅提供簡體中文，導致繁體中文系統瀏覽這些頁面時會顯示為空白。  
 此插件可自動將 Steam 頁面的語系轉換為繁體中文或簡體中文，並提供選項讓使用者選擇是否開啟自動跳轉。
 
@@ -29,9 +29,10 @@ Steam 繁體簡體中文轉換器 是一個油猴 (Tampermonkey) 插件，旨在
 1. 安裝插件後，打開 Steam 商店頁面。
 2. 右上角會出現一個按鈕，點擊按鈕可在繁體中文和簡體中文之間切換。
 3. 左鍵點擊 Tampermonkey 圖標，選擇相應的選單命令來啟用或停用自動跳轉功能。
+![選項位置](https://i.imgur.com/X50TVlt.png)
 4. 選擇「加入作者 Discord」以聯繫作者並獲取更多支持。
 
-![選項位置](https://i.imgur.com/X50TVlt.png)
+
 
 ## 開發者
 

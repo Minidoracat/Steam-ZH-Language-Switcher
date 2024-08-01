@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Steam 繁體簡體中文轉換器
+// @name         Steam 頁面繁體簡體中文轉換器
 // @namespace    http://tampermonkey.net/
 // @version      1.1
 // @description  自動將 Steam 頁面在繁體中文和簡體中文之間轉換，並提供選項讓使用者選擇是否開啟自動跳轉。由於某些 Steam 頁面僅提供簡體中文，導致繁體中文系統瀏覽這些頁面時會顯示為空白。此插件由 Minidoracat 開發，用於解決這一問題。更多信息請參閱作者的 Discord。
