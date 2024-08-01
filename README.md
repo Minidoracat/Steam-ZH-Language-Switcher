@@ -1,6 +1,7 @@
 # Steam 繁體簡體中文轉換器
 
-[![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Script-orange.svg)](https://greasyfork.org/zh-TW/scripts/502316-steam-%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E8%BD%89%E7%B0%A1%E9%AB%94%E4%B8%AD%E6%96%87)
+[![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Script-orange.svg)](https://greasyfork.org/zh-TW/scripts/502316-steam-%E7%B9%81%E9%AB%94%E7%B0%A1%E9%AB%94%E4%B8%AD%E6%96%87%E8%BD%89%E6%8F%9B%E5%99%A8)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-blue.svg)](https://github.com/Minidoracat/Steam-ZH-Language-Switcher)
 
 ## 簡介
 
@@ -21,7 +22,7 @@ Steam 繁體簡體中文轉換器 是一個油猴 (Tampermonkey) 插件，旨在
 1. 安裝 [Tampermonkey](https://www.tampermonkey.net/) 瀏覽器擴展。
 2. 點擊以下連結安裝此腳本：
 
-   [安裝腳本](https://github.com/Minidoracat/Steam-Language-Switcher/raw/master/steam-language-switcher.user.js)
+   [安裝腳本](https://github.com/Minidoracat/Steam-ZH-Language-Switcher/raw/master/steam-zh-language-switcher.user.js)
 
 ## 使用方法
 
@@ -48,4 +49,4 @@ Steam 繁體簡體中文轉換器 是一個油猴 (Tampermonkey) 插件，旨在
 
 ## 授權
 
-本專案採用 MIT 授權。詳細資訊請參閱 [LICENSE](https://github.com/Minidoracat/Steam-Language-Switcher/blob/master/LICENSE) 文件。
+本專案採用 MIT 授權。詳細資訊請參閱 [LICENSE](https://github.com/Minidoracat/Steam-ZH-Language-Switcher/blob/master/LICENSE) 文件。
