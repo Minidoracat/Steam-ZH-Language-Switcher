@@ -1,17 +1,18 @@
 // ==UserScript==
-// @name         Steam 繁體中文轉簡體中文
+// @name         Steam 繁體簡體中文轉換器
 // @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  自動將 Steam 頁面從繁體中文轉換為簡體中文，並提供選項讓使用者選擇是否開啟自動跳轉。由於某些 Steam 頁面僅提供簡體中文，導致繁體中文系統瀏覽這些頁面時會顯示為空白。此插件由 Minidoracat 開發，用於解決這一問題。更多信息請參閱作者的 Discord。
-// @description:zh-CN 自动将 Steam 页面从繁体中文转换为简体中文，并提供选项让用户选择是否开启自动跳转。由于某些 Steam 页面仅提供简体中文，导致繁体中文系统浏览这些页面时会显示为空白。此插件由 Minidoracat 开发，用于解决这一问题。更多信息请参阅作者的 Discord。
+// @version      1.1
+// @description  自動將 Steam 頁面在繁體中文和簡體中文之間轉換，並提供選項讓使用者選擇是否開啟自動跳轉。由於某些 Steam 頁面僅提供簡體中文，導致繁體中文系統瀏覽這些頁面時會顯示為空白。此插件由 Minidoracat 開發，用於解決這一問題。更多信息請參閱作者的 Discord。
+// @description:zh-CN 自动将 Steam 页面在繁体中文和简体中文之间转换，并提供选项让用户选择是否开启自动跳转。由于某些 Steam 页面仅提供简体中文，导致繁体中文系统浏览这些页面时会显示为空白。此插件由 Minidoracat 开发，用于解决这一问题。更多信息请参阅作者的 Discord。
 // @license      MIT
+// @icon         https://www.google.com/s2/favicons?domain=steampowered.com
 // @author       Minidoracat
 // @match        *://store.steampowered.com/*
 // @grant        GM_registerMenuCommand
 // @grant        GM_unregisterMenuCommand
 // @grant        GM_setValue
 // @grant        GM_getValue
-// @homepageURL  https://github.com/Minidoracat/Steam-ZH-Language-Switcher
+// @homepageURL  https://github.com/Minidoracat/Steam-Language-Switcher
 // @supportURL   https://discord.gg/Gur2V67
 // ==/UserScript==
 
@@ -59,38 +60,90 @@
 
     addSwitchButton();
 
-    // 註冊選單命令
-    GM_registerMenuCommand('切換到簡體中文', switchToSimplifiedChinese);
-    GM_registerMenuCommand('開啟自動跳轉到簡體中文', enableAutoSwitch, 'a');
-    GM_registerMenuCommand('關閉自動跳轉到簡體中文', disableAutoSwitch, 'b');
-    GM_registerMenuCommand('加入作者 Discord', joinDiscord);
+    // 初始化選單
+    function initMenu() {
+        // 先註銷現有的選單命令
+        GM_unregisterMenuCommand('autoSwitchToChineseEnable');
+        GM_unregisterMenuCommand('autoSwitchToChineseDisable');
+        GM_unregisterMenuCommand('autoSwitchToTraditionalChineseEnable');
+        GM_unregisterMenuCommand('autoSwitchToTraditionalChineseDisable');
 
-    // 檢查是否開啟自動跳轉
-    if (GM_getValue('autoSwitchToChinese', false)) {
-        autoSwitch();
+        const autoSwitchToChinese = GM_getValue('autoSwitchToChinese', false);
+        const autoSwitchToTraditionalChinese = GM_getValue('autoSwitchToTraditionalChinese', false);
+
+        if (autoSwitchToChinese) {
+            GM_registerMenuCommand('停用自動跳轉到簡體中文', () => {
+                disableAutoSwitchToChinese();
+                location.reload(); // 更新選單後刷新頁面
+            }, 'd');
+        } else {
+            GM_registerMenuCommand('啟用自動跳轉到簡體中文', () => {
+                enableAutoSwitchToChinese();
+                location.reload(); // 更新選單後刷新頁面
+            }, 'e');
+        }
+
+        if (autoSwitchToTraditionalChinese) {
+            GM_registerMenuCommand('停用自動跳轉到繁體中文', () => {
+                disableAutoSwitchToTraditionalChinese();
+                location.reload(); // 更新選單後刷新頁面
+            }, 'f');
+        } else {
+            GM_registerMenuCommand('啟用自動跳轉到繁體中文', () => {
+                enableAutoSwitchToTraditionalChinese();
+                location.reload(); // 更新選單後刷新頁面
+            }, 'g');
+        }
+
+        GM_registerMenuCommand('加入作者 Discord', joinDiscord);
     }
 
-    function switchToSimplifiedChinese() {
-        let url = new URL(window.location.href);
-        url.searchParams.set('l', 'schinese');
-        window.location.href = url.href;
-    }
+    // 初始化選單
+    initMenu();
 
-    function enableAutoSwitch() {
+    function enableAutoSwitchToChinese() {
         GM_setValue('autoSwitchToChinese', true);
-        autoSwitch();
+        GM_setValue('autoSwitchToTraditionalChinese', false); // 禁用自動跳轉到繁體中文
         alert('自動跳轉到簡體中文已啟用');
+        autoSwitchToSimplifiedChinese();
     }
 
-    function disableAutoSwitch() {
+    function disableAutoSwitchToChinese() {
         GM_setValue('autoSwitchToChinese', false);
         alert('自動跳轉到簡體中文已停用');
     }
 
-    function autoSwitch() {
+    function enableAutoSwitchToTraditionalChinese() {
+        GM_setValue('autoSwitchToTraditionalChinese', true);
+        GM_setValue('autoSwitchToChinese', false); // 禁用自動跳轉到簡體中文
+        alert('自動跳轉到繁體中文已啟用');
+        autoSwitchToTraditionalChinese();
+    }
+
+    function disableAutoSwitchToTraditionalChinese() {
+        GM_setValue('autoSwitchToTraditionalChinese', false);
+        alert('自動跳轉到繁體中文已停用');
+    }
+
+    // 檢查是否開啟自動跳轉
+    if (GM_getValue('autoSwitchToChinese', false)) {
+        autoSwitchToSimplifiedChinese();
+    } else if (GM_getValue('autoSwitchToTraditionalChinese', false)) {
+        autoSwitchToTraditionalChinese();
+    }
+
+    function autoSwitchToSimplifiedChinese() {
         let url = new URL(window.location.href);
         if (url.searchParams.get('l') !== 'schinese') {
             url.searchParams.set('l', 'schinese');
+            window.location.href = url.href;
+        }
+    }
+
+    function autoSwitchToTraditionalChinese() {
+        let url = new URL(window.location.href);
+        if (url.searchParams.get('l') !== 'tchinese') {
+            url.searchParams.set('l', 'tchinese');
             window.location.href = url.href;
         }
     }
