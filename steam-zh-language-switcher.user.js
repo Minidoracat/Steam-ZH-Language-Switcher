@@ -13,7 +13,7 @@
 // @grant        GM_unregisterMenuCommand
 // @grant        GM_setValue
 // @grant        GM_getValue
-// @homepageURL  https://github.com/Minidoracat/Steam-Language-Switcher
+// @homepageURL  https://github.com/Minidoracat/Steam-ZH-Language-Switcher
 // @supportURL   https://discord.gg/Gur2V67
 // ==/UserScript==
 
